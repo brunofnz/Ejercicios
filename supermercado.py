@@ -28,26 +28,26 @@ class producto:
     def __repr__(self):
         return "Marca: {}\n Tipo: {}\n Precio: {}\n PrecioCuidado: {}\n Primera necesidad: {}\n".format(self.marca, self.tipo,self.precio, self.precioCuidado, self.primeraNecesidad)
 
-producto3 = None
-class catalago:
+class catalogo:
     def __init__(self):
-        self.producto = 
+        self.producto = None
         self.productos = list()
     
     def __repr__(self):
-        pass
+        return "{}".format(self.productos)
     
-    def agregarProducto(marca, tipo, precio, precioCuidado = False, primeraNecesidad = False):
+    def agregarProducto(self, marca, tipo, precio, precioCuidado = False, primeraNecesidad = False):
         self.producto = producto(marca, tipo, precio, precioCuidado, primeraNecesidad)
-        catalago1.
+        self.productos.append(self.producto)
+        self.producto = None
 
-    
 
 #CODIGO PRINCIPAL
 
 supermercado1 = supermercado('Carrefour','Av. San Martin 446')
-catalago1 = catalago()
-agregarProducto('Serenisima', 'Leche',70,True,True)
+catalogo1 = catalogo()
+catalogo1.agregarProducto('Serenisima', 'Leche',70,True,True)
+print(catalogo1)
 
 
 
