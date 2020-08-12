@@ -18,7 +18,7 @@ from os import system  #esto es para que
 system("cls")        #limpie la consola
 
 class supermercado:
-    def __init__(self,nombre,direccion,pais):
+    def __init__(self,nombre,direccion):
         self.nombre = nombre
         self.direccion = direccion
         self.catalogo = list()
