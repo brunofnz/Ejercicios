@@ -26,3 +26,8 @@ class Cuenta:
         else:
             self.cantidad = self.cantidad - cantidad
             return "Operacion Exitosa"
+
+cuenta1 = Cuenta("Bruno") 
+cuenta1.mostrar()
+cuenta1.ingresar(155)
+print(cuenta1.cantidad)
