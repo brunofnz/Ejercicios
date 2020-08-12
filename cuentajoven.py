@@ -38,3 +38,15 @@ class Cuenta:
         else:
             self.cantidad = self.cantidad - cantidad
             return "Operacion Exitosa"
+
+class CuentaJoven(Cuenta):
+    def __init__(self,titular,cantidad,bonificacion,edad):
+        Cuenta.__init__(self,titular,cantidad)
+        self.bonificacion = bonificacion
+        self.edad = edad
+
+    def esTitularValido()
+        pass
+
+    def mostrar()
+        pass
