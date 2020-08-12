@@ -56,17 +56,16 @@ class producto:
 
 supermercado1 = supermercado('Carrefour','Av. San Martin 446')
 supermercado1.agregarProducto(producto('Serenisima', 'Leche',70,True,True))
-print(supermercado1)
-"""supermercado1.agregarProducto('Sancor', 'Yogur',90,True,True)
-supermercado1.agregarProducto('Coca Cola', 'Gaseosa',120)
-supermercado1.agregarProducto('Pepsi', 'Gaseosa',130)
-supermercado1.agregarProducto('Paladini', 'Salchicha',35)
-supermercado1.agregarProducto('Blanca Flor', 'Harina',45,True,True)
-supermercado1.agregarProducto('Ace', 'Azucar',60)
-supermercado1.agregarProducto('Ala', "Jabon en Polvo",40)
+supermercado1.agregarProducto(producto('Sancor', 'Yogur',90,True,True))
+supermercado1.agregarProducto(producto('Coca Cola', 'Gaseosa',120))
+supermercado1.agregarProducto(producto('Pepsi', 'Gaseosa',130))
+supermercado1.agregarProducto(producto('Paladini', 'Salchicha',35))
+supermercado1.agregarProducto(producto('Blanca Flor', 'Harina',45,True,True))
+supermercado1.agregarProducto(producto('Ace', 'Azucar',60))
+supermercado1.agregarProducto(producto('Ala', "Jabon en Polvo",40))
 print(supermercado1)
 supermercado1.cantidadTotalProductos()
-supermercado1.precioTotalProductos()"""
+supermercado1.precioTotalProductos()
 
 
 
