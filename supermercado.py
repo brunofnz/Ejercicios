@@ -22,16 +22,16 @@ class supermercado:
         self.nombre = nombre
         self.direccion = direccion
         self.catalogo = list()
-        self.__producto = None
+        
         self.__precio = 0
 
     def __repr__(self):
         return "{}".format(self.catalogo)
     
-    def agregarProducto(self, marca, tipo, precio, precioCuidado = False, primeraNecesidad = False):
-        self.__producto = producto(marca, tipo, precio, precioCuidado, primeraNecesidad)
-        self.catalogo.append(self.__producto)
-        self.__producto = None
+    def agregarProducto(self, producto):
+        #producto3 = producto(marca, tipo, precio, precioCuidado, primeraNecesidad)
+        #self.__producto = producto(marca, tipo, precio, precioCuidado, primeraNecesidad)
+        self.catalogo.append(producto)
 
     def cantidadTotalProductos(self):
         print("Cantidad total de productos: ",len(self.catalogo))
@@ -55,8 +55,9 @@ class producto:
 #CODIGO PRINCIPAL
 
 supermercado1 = supermercado('Carrefour','Av. San Martin 446')
-supermercado1.agregarProducto('Serenisima', 'Leche',70,True,True)
-supermercado1.agregarProducto('Sancor', 'Yogur',90,True,True)
+supermercado1.agregarProducto(producto('Serenisima', 'Leche',70,True,True))
+print(supermercado1)
+"""supermercado1.agregarProducto('Sancor', 'Yogur',90,True,True)
 supermercado1.agregarProducto('Coca Cola', 'Gaseosa',120)
 supermercado1.agregarProducto('Pepsi', 'Gaseosa',130)
 supermercado1.agregarProducto('Paladini', 'Salchicha',35)
@@ -65,7 +66,7 @@ supermercado1.agregarProducto('Ace', 'Azucar',60)
 supermercado1.agregarProducto('Ala', "Jabon en Polvo",40)
 print(supermercado1)
 supermercado1.cantidadTotalProductos()
-supermercado1.precioTotalProductos()
+supermercado1.precioTotalProductos()"""
 
 
 
