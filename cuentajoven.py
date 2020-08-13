@@ -16,6 +16,8 @@
 
 #Piensa los métodos heredados de la clase madre que hay que reescribir.
 
+from datetime import date
+from datetime import datetime
 
 class Cuenta:
     def __init__(self, titular, cantidad = 0.0):
@@ -45,8 +47,60 @@ class CuentaJoven(Cuenta):
         self.bonificacion = bonificacion
         self.edad = edad
 
-    def esTitularValido()
+    def esTitularValido():
         pass
 
-    def mostrar()
+    def mostrar():
         pass
+
+
+ # -*- coding: utf-8 -* 
+# Importamos el objeto 'date' para manejar las fechas: from datetime import date 
+ 
+def calcular_edad(nacimiento): 
+    """ 
+       Calcula la edad exacta de la persona tomando en cuenta      
+      día, mes y año actual y mes, día y año de nacimiento. 
+    """ 
+   # Obtenemos la fecha de hoy:   hoy = date.today() 
+   # Sustituimos el año de nacimiento por el actual:      
+    try: 
+        cumpleanios = nacimiento.replace(year=hoy.year) 
+   # En caso de que la fecha de nacimiento es 29 de 
+   # febrero y el año actual no sea bisiesto: 
+    except ValueError: 
+       # Le restamos uno al día de nacimiento para que quede en 28:       
+        cumpleanios = nacimiento.replace(year=hoy.year, day=nacimiento.day - 1) 
+   # Cálculo final: 
+    if cumpleanios > hoy:          
+        return hoy.year - nacimiento.year - 1 
+    else: 
+        return hoy.year - nacimiento.year 
+
+def main(): 
+    """Muestra un ejemplo.""" 
+    dia, mes, anio = [int(v) for v in "31/03/1990".split("/")] 
+    nacimiento = date(anio, mes, dia) 
+    print(calcular_edad(nacimiento))
+
+main()  
+
+
+
+
+
+
+
+
+
+"""hoy = datetime.now()
+dia = hoy.day
+mes = hoy.month
+anio = hoy.year"""
+
+
+
+
+
+"""hoy = now.strftime('%d / %m / %Y')
+print(hoy)"""
