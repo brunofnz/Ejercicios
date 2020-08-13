@@ -70,13 +70,3 @@ supermercado1.precioTotalProductos()
 
 
 
-
-
-"""producto1 = producto('Coca Cola', 'Gaseosa', 120)
-print(producto1)
-producto2= producto('Serenisima', 'Leche',70,True,True)
-print(producto2)"""
-
-
-
-
