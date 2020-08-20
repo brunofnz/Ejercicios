@@ -20,13 +20,18 @@ class pizza:
 
 #Espacio de funciones
 
-pizza1 = None
 conjunto = [8,10,12]
-def segunPorcion(tamaño):
+def segunPorcion(tamaño,pizza):
     if (tamaño in conjunto):
-        pizza1 = pizza("Pizza",tamaño,0,0,0,0)
+        pizza.setTamaño(tamaño)
     else:
         print("El tamaño seleccionado no es correcto")
+
+pizza1 = pizza("Pizza",8,0,0,0,0)
+print(pizza1)
+print("")
+segunPorcion(6,pizza1)
+print(pizza1)
 
 
 
